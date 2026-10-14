@@ -41,18 +41,29 @@ export const IMAGES = {
   outdoorPlay: outdoorPlayImg
 };
 
+export const OFFICIAL_PRICING = {
+  registrationFee: 'R250 Once off',
+  registrationFeeAmount: 250,
+  tiers: [
+    { grade: 'Grade 0 / nursery', ageGroup: '0 – 18 Months', monthlyFee: 900, feeFormatted: 'R900' },
+    { grade: 'Grade RRR', ageGroup: '18 Months – 3 Years', monthlyFee: 600, feeFormatted: 'R600' },
+    { grade: 'Grade RR', ageGroup: '3 – 4 Years', monthlyFee: 550, feeFormatted: 'R550' },
+    { grade: 'Grade R', ageGroup: '4 – 6 Years', monthlyFee: 500, feeFormatted: 'R500' }
+  ]
+};
+
 export const PROGRAMS: ProgramItem[] = [
   {
     id: 'baby-stars',
-    name: 'Baby Little Stars',
-    ageGroup: '3 Months – 2 Years',
-    subtitle: 'Infant Daycare & Sensory Care',
+    name: 'Grade 0 / Nursery',
+    ageGroup: '0 – 18 Months',
+    subtitle: 'Infant Daycare & Sensory Care (Grade 0 / Nursery)',
     description: 'Gentle, nurturing early stimulation focused on sensory exploration, tummy time, milestone tracking, and tender loving care in a hygienic cot haven.',
     colorTheme: 'purple',
     iconName: 'Baby',
     schedule: '06:00 – 18:00 (Full Day) or 06:00 – 13:00 (Half Day)',
-    monthlyFee: 2100,
-    highlight: '1:4 Educator to Infant Ratio with Dedicated Nursery Room',
+    monthlyFee: 900,
+    highlight: 'R900 / month · Registration fee Once off - R250',
     features: [
       'Warm cot nursery with continuous audio-visual monitoring',
       'Daily milestone & feeding journal sent home to parents',
@@ -62,15 +73,15 @@ export const PROGRAMS: ProgramItem[] = [
   },
   {
     id: 'little-explorers',
-    name: 'Little Explorers',
-    ageGroup: '2 – 3 Years',
-    subtitle: 'Toddler Discovery & Social Play',
+    name: 'Grade RRR',
+    ageGroup: '18 Months – 3 Years',
+    subtitle: 'Toddler Discovery & Social Play (Grade RRR)',
     description: 'Curiosity-fueled toddler adventures fostering speech development, sensory play, interactive circle time, gentle potty training support, and joyful discovery.',
     colorTheme: 'green',
     iconName: 'Ship',
     schedule: '06:00 – 18:00 (Full Day) or 06:00 – 13:00 (Half Day)',
-    monthlyFee: 1950,
-    highlight: 'Potty Training Support & Interactive Social Play',
+    monthlyFee: 600,
+    highlight: 'R600 / month · Registration fee Once off - R250',
     features: [
       'Language enrichment, nursery rhymes & conversational story circles',
       'Tactile sand & water play with gross motor obstacle tracks',
@@ -80,15 +91,15 @@ export const PROGRAMS: ProgramItem[] = [
   },
   {
     id: 'first-steps',
-    name: 'First Steps & Grade R Prep',
-    ageGroup: '3 – 5 Years',
-    subtitle: 'Pre-School & Kindergarten Readiness',
+    name: 'Grade RR',
+    ageGroup: '3 – 4 Years',
+    subtitle: 'Junior Pre-School & Foundation Learning (Grade RR)',
     description: 'Foundational literacy, phonics, numbers, science discovery, and emotional resilience preparing bright young minds for Grade R and primary school success.',
     colorTheme: 'amber',
     iconName: 'Blocks',
     schedule: '06:00 – 18:00 (Full Day) or 06:00 – 13:00 (Half Day)',
-    monthlyFee: 1950,
-    highlight: 'CAPS-Aligned Pre-School Curriculum & Early Phonics',
+    monthlyFee: 550,
+    highlight: 'R550 / month · Registration fee Once off - R250',
     features: [
       'Letterland phonics, emerging handwriting & numerical concepts',
       'Mini STEM experiments, gardening & nature explorations',
@@ -97,21 +108,21 @@ export const PROGRAMS: ProgramItem[] = [
     ]
   },
   {
-    id: 'little-einsteins',
-    name: 'Little Einsteins & After-Care',
-    ageGroup: 'Grade R – Grade 7 (6 – 12 Years)',
-    subtitle: 'After-Care & Supervised Homework Club',
-    description: 'Comprehensive afternoon care including school collection from Lenasia primary schools, hot freshly cooked lunches, dedicated homework tutoring, and fun sports.',
+    id: 'grade-r',
+    name: 'Grade R',
+    ageGroup: '4 – 6 Years',
+    subtitle: 'School Readiness & Foundation Phase (Grade R)',
+    description: 'Comprehensive CAPS-aligned preschool curriculum preparing children for primary school with phonics, early reading, writing, mathematical foundations, and creative arts.',
     colorTheme: 'pink',
     iconName: 'Sparkles',
-    schedule: '13:00 – 18:00 (Mon – Fri) & Full Days during School Holidays',
-    monthlyFee: 1100,
-    highlight: 'Safe School Pickups in Lenasia & 100% Homework Checked',
+    schedule: '06:00 – 18:00 (Full Day) or 06:00 – 13:00 (Half Day)',
+    monthlyFee: 500,
+    highlight: 'R500 / month · Registration fee Once off - R250',
     features: [
-      'Reliable transport pickup from Lenasia schools (e.g. SBSM, Lenasia South, Alpha)',
-      'Hot home-style nutritious lunch & wholesome afternoon snack',
-      'Qualified tutors ensuring homework is completed correctly before pickup',
-      'Reading corner, board games, soccer & playground relaxation'
+      'CAPS-aligned Grade R school readiness curriculum',
+      'Early arithmetic, letters, sounds, and pencil grip mastery',
+      'Nutritious cooked meals, snack times & afternoon playtime',
+      'Primary school readiness evaluation and graduation recognition'
     ]
   }
 ];
@@ -395,37 +406,37 @@ export const FAQS = [
 
 export const FEE_TIERS_2027 = [
   {
-    name: 'Baby Little Stars (Daycare)',
-    age: '3 Months – 2 Years',
+    name: 'Grade 0 / nursery',
+    age: '0 – 18 Months',
     hours: '06:00 – 18:00',
-    fee: 'R2,100 / month',
-    deposit: 'R500 once-off registration',
-    includes: ['Nursery cot bedding sanitized daily', '3 Freshly prepared baby meals & puree', 'Milestone journal', 'Sensory stimulation tools']
+    fee: 'R900 / month',
+    deposit: 'Registration fee Once off - R250',
+    includes: ['Nursery cot bedding sanitized daily', '3 Freshly prepared baby meals & puree', 'Daily milestone & feeding journal', 'Loving infant sensory stimulation & care']
   },
   {
-    name: 'Little Explorers & Toddlers',
-    age: '2 – 3 Years',
+    name: 'Grade RRR',
+    age: '18 Months – 3 Years',
     hours: '06:00 – 18:00',
-    fee: 'R1,950 / month',
-    deposit: 'R450 once-off registration',
+    fee: 'R600 / month',
+    deposit: 'Registration fee Once off - R250',
     popular: true,
-    includes: ['Breakfast, hot lunch & 2 snack breaks', 'Potty training supervision', 'All educational arts & craft supplies', 'Daily storybook reading & gross motor drills']
+    includes: ['Breakfast, hot lunch & 2 snack breaks', 'Potty training supervision & partnership', 'All educational arts & craft supplies', 'Daily storybook reading & gross motor drills']
   },
   {
-    name: 'Pre-School & Grade R Prep',
-    age: '3 – 5 Years',
+    name: 'Grade RR',
+    age: '3 – 4 Years',
     hours: '06:00 – 18:00',
-    fee: 'R1,950 / month',
-    deposit: 'R450 once-off registration',
-    includes: ['CAPS aligned readiness curriculum', 'Phonics & early arithmetic workbook pack', 'Cooked meals & afternoon care included', 'Annual concert & sports participation']
+    fee: 'R550 / month',
+    deposit: 'Registration fee Once off - R250',
+    includes: ['CAPS-aligned foundation readiness curriculum', 'Phonics & early arithmetic workbook pack', 'Cooked meals & full day care included', 'Annual concert & sports participation']
   },
   {
-    name: 'After-Care & Homework Club',
-    age: 'Grade R – Grade 7',
-    hours: '13:00 – 18:00',
-    fee: 'R1,100 / month',
-    deposit: 'R350 once-off registration',
-    includes: ['Optional school pick-up in Lenasia', 'Cooked lunch upon arrival', 'Supervised homework tutor assistance', 'Holiday care access included at discounted rate']
+    name: 'Grade R',
+    age: '4 – 6 Years',
+    hours: '06:00 – 18:00',
+    fee: 'R500 / month',
+    deposit: 'Registration fee Once off - R250',
+    includes: ['Full Grade R primary school readiness', 'Letterland phonics, reading & writing practice', 'Mini-STEM explorations & numeracy mastery', 'School readiness assessment & graduation']
   }
 ];
 

@@ -169,6 +169,9 @@ export const ProgramsPage: React.FC<ProgramsPageProps> = ({ onNavigate, onOpenBo
                         <span className="text-xs font-normal text-slate-500"> / month</span>
                       </div>
                       <div className="text-[10px] text-slate-500">All cooked meals & snacks included</div>
+                      <div className="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md inline-block mt-1">
+                        Registration fee Once off - R250
+                      </div>
                     </div>
 
                     <div className="space-y-2 pt-2">

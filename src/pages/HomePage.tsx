@@ -360,20 +360,65 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBookTour }
             </p>
           </div>
 
-          {/* 4 Program Cards */}
+          {/* Official Fee Notice Strip */}
+          <div className="max-w-4xl mx-auto mb-10 p-4 bg-white/95 backdrop-blur border border-purple-200 rounded-3xl shadow-sm">
+            <div className="flex flex-wrap items-center justify-between gap-3 text-xs mb-3 pb-3 border-b border-purple-100">
+              <div className="flex items-center gap-2 font-bold text-[#5B34B2]">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="text-sm font-fredoka tracking-wide">Official Monthly Tuition & Registration Fees</span>
+              </div>
+              <div className="text-slate-700 font-semibold bg-purple-50 px-3 py-1.5 rounded-full border border-purple-200">
+                Registration Fee: <span className="font-bold text-[#5B34B2]">Once off - R250</span>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 text-center text-xs">
+              <div className="bg-purple-50/90 border border-purple-100 rounded-xl py-2 px-2.5">
+                <span className="text-purple-700 font-bold block text-[11px]">Grade 0 / Nursery</span>
+                <span className="text-[#5B34B2] font-extrabold font-fredoka text-xs sm:text-sm">Child 0- 18 months - R900</span>
+              </div>
+              <div className="bg-emerald-50/90 border border-emerald-100 rounded-xl py-2 px-2.5">
+                <span className="text-emerald-700 font-bold block text-[11px]">Grade RRR</span>
+                <span className="text-[#16A34A] font-extrabold font-fredoka text-xs sm:text-sm">Child 18 months - 3 years - R600</span>
+              </div>
+              <div className="bg-amber-50/90 border border-amber-100 rounded-xl py-2 px-2.5">
+                <span className="text-amber-700 font-bold block text-[11px]">Grade RR</span>
+                <span className="text-[#D97706] font-extrabold font-fredoka text-xs sm:text-sm">Child 3- 4 years - R550</span>
+              </div>
+              <div className="bg-rose-50/90 border border-rose-100 rounded-xl py-2 px-2.5">
+                <span className="text-rose-700 font-bold block text-[11px]">Grade R</span>
+                <span className="text-[#E11D48] font-extrabold font-fredoka text-xs sm:text-sm">Child 4 - 6 years - R500</span>
+              </div>
+            </div>
+          </div>
+
+          {/* 4 Program Cards with New Prices */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Card 1: Baby Little Stars (Purple) */}
+            {/* Card 1: Grade 0 / nursery (Purple) */}
             <div className="bg-[#FAF5FF] hover:bg-[#F3E8FF] rounded-3xl p-6 text-center border border-purple-100 transition-all duration-200 hover:-translate-y-1 hover:shadow-xl flex flex-col justify-between group">
               <div>
-                <div className="w-16 h-16 rounded-2xl bg-[#7C3AED] text-white flex items-center justify-center mx-auto mb-5 shadow-md shadow-purple-500/25 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 rounded-2xl bg-[#7C3AED] text-white flex items-center justify-center mx-auto mb-4 shadow-md shadow-purple-500/25 group-hover:scale-110 transition-transform">
                   <Baby className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-bold font-fredoka text-slate-900 mb-1">
-                  Baby Little Stars
+                <h3 className="text-xl font-bold font-fredoka text-slate-900 mb-0.5">
+                  Grade 0 / nursery
                 </h3>
                 <p className="text-xs text-purple-700 font-bold mb-3">
-                  Infants 3 Months – 2 Years
+                  Child 0- 18 months
                 </p>
+
+                {/* Monthly Tuition Badge */}
+                <div className="mb-4 p-3 bg-purple-100/90 border border-purple-200/90 rounded-2xl shadow-xs">
+                  <div className="text-[10px] font-extrabold uppercase tracking-wider text-purple-700 mb-0.5">
+                    Monthly Tuition
+                  </div>
+                  <div className="text-2xl font-bold font-fredoka text-[#5B34B2] leading-tight">
+                    R900 <span className="text-xs font-normal text-slate-600">/ month</span>
+                  </div>
+                  <div className="mt-1.5 inline-block text-[11px] font-bold text-[#5B34B2] bg-white px-2.5 py-1 rounded-lg border border-purple-200 shadow-xs">
+                    Child 0- 18 months - R900
+                  </div>
+                </div>
+
                 <p className="text-xs text-slate-600 leading-relaxed mb-4">
                   Gentle sensory stimulation, peaceful nap cots, feeding routines, and loving milestone guidance.
                 </p>
@@ -387,18 +432,32 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBookTour }
               </button>
             </div>
 
-            {/* Card 2: Little Explorers (Green/Mint) */}
+            {/* Card 2: Grade RRR (Green/Mint) */}
             <div className="bg-[#F0FDF4] hover:bg-[#DCFCE7] rounded-3xl p-6 text-center border border-emerald-100 transition-all duration-200 hover:-translate-y-1 hover:shadow-xl flex flex-col justify-between group">
               <div>
-                <div className="w-16 h-16 rounded-2xl bg-[#16A34A] text-white flex items-center justify-center mx-auto mb-5 shadow-md shadow-emerald-500/25 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 rounded-2xl bg-[#16A34A] text-white flex items-center justify-center mx-auto mb-4 shadow-md shadow-emerald-500/25 group-hover:scale-110 transition-transform">
                   <Ship className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-bold font-fredoka text-slate-900 mb-1">
-                  Little Explorers
+                <h3 className="text-xl font-bold font-fredoka text-slate-900 mb-0.5">
+                  Grade RRR
                 </h3>
                 <p className="text-xs text-emerald-700 font-bold mb-3">
-                  Toddlers 2 – 3 Years
+                  Child 18 months - 3 years
                 </p>
+
+                {/* Monthly Tuition Badge */}
+                <div className="mb-4 p-3 bg-emerald-100/90 border border-emerald-200/90 rounded-2xl shadow-xs">
+                  <div className="text-[10px] font-extrabold uppercase tracking-wider text-emerald-700 mb-0.5">
+                    Monthly Tuition
+                  </div>
+                  <div className="text-2xl font-bold font-fredoka text-[#16A34A] leading-tight">
+                    R600 <span className="text-xs font-normal text-slate-600">/ month</span>
+                  </div>
+                  <div className="mt-1.5 inline-block text-[11px] font-bold text-[#16A34A] bg-white px-2.5 py-1 rounded-lg border border-emerald-200 shadow-xs">
+                    Child 18 months - 3 years - R600
+                  </div>
+                </div>
+
                 <p className="text-xs text-slate-600 leading-relaxed mb-4">
                   Speech circles, tactile sand and water play, toilet training support, and active movement.
                 </p>
@@ -412,18 +471,32 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBookTour }
               </button>
             </div>
 
-            {/* Card 3: First Steps (Warm Amber) */}
+            {/* Card 3: Grade RR (Warm Amber) */}
             <div className="bg-[#FFFBEB] hover:bg-[#FEF3C7] rounded-3xl p-6 text-center border border-amber-100 transition-all duration-200 hover:-translate-y-1 hover:shadow-xl flex flex-col justify-between group">
               <div>
-                <div className="w-16 h-16 rounded-2xl bg-[#D97706] text-white flex items-center justify-center mx-auto mb-5 shadow-md shadow-amber-500/25 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 rounded-2xl bg-[#D97706] text-white flex items-center justify-center mx-auto mb-4 shadow-md shadow-amber-500/25 group-hover:scale-110 transition-transform">
                   <Blocks className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-bold font-fredoka text-slate-900 mb-1">
-                  First Steps Pre-School
+                <h3 className="text-xl font-bold font-fredoka text-slate-900 mb-0.5">
+                  Grade RR
                 </h3>
                 <p className="text-xs text-amber-700 font-bold mb-3">
-                  Pre-School 3 – 5 Years
+                  Child 3- 4 years
                 </p>
+
+                {/* Monthly Tuition Badge */}
+                <div className="mb-4 p-3 bg-amber-100/90 border border-amber-200/90 rounded-2xl shadow-xs">
+                  <div className="text-[10px] font-extrabold uppercase tracking-wider text-amber-700 mb-0.5">
+                    Monthly Tuition
+                  </div>
+                  <div className="text-2xl font-bold font-fredoka text-[#D97706] leading-tight">
+                    R550 <span className="text-xs font-normal text-slate-600">/ month</span>
+                  </div>
+                  <div className="mt-1.5 inline-block text-[11px] font-bold text-[#D97706] bg-white px-2.5 py-1 rounded-lg border border-amber-200 shadow-xs">
+                    Child 3- 4 years - R550
+                  </div>
+                </div>
+
                 <p className="text-xs text-slate-600 leading-relaxed mb-4">
                   CAPS readiness, Letterland phonics, numbers, mini-science, art, and confident social interactions.
                 </p>
@@ -437,20 +510,34 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBookTour }
               </button>
             </div>
 
-            {/* Card 4: Little Einsteins & After-Care (Soft Pink) */}
+            {/* Card 4: Grade R (Soft Pink) */}
             <div className="bg-[#FFF1F2] hover:bg-[#FFE4E6] rounded-3xl p-6 text-center border border-pink-100 transition-all duration-200 hover:-translate-y-1 hover:shadow-xl flex flex-col justify-between group">
               <div>
-                <div className="w-16 h-16 rounded-2xl bg-[#E11D48] text-white flex items-center justify-center mx-auto mb-5 shadow-md shadow-rose-500/25 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 rounded-2xl bg-[#E11D48] text-white flex items-center justify-center mx-auto mb-4 shadow-md shadow-rose-500/25 group-hover:scale-110 transition-transform">
                   <Sparkles className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-bold font-fredoka text-slate-900 mb-1">
-                  Little Einsteins
+                <h3 className="text-xl font-bold font-fredoka text-slate-900 mb-0.5">
+                  Grade R
                 </h3>
                 <p className="text-xs text-rose-700 font-bold mb-3">
-                  After-Care 6 – 12 Years
+                  Child 4 - 6 years
                 </p>
+
+                {/* Monthly Tuition Badge */}
+                <div className="mb-4 p-3 bg-rose-100/90 border border-rose-200/90 rounded-2xl shadow-xs">
+                  <div className="text-[10px] font-extrabold uppercase tracking-wider text-rose-700 mb-0.5">
+                    Monthly Tuition
+                  </div>
+                  <div className="text-2xl font-bold font-fredoka text-[#E11D48] leading-tight">
+                    R500 <span className="text-xs font-normal text-slate-600">/ month</span>
+                  </div>
+                  <div className="mt-1.5 inline-block text-[11px] font-bold text-[#E11D48] bg-white px-2.5 py-1 rounded-lg border border-rose-200 shadow-xs">
+                    Child 4 - 6 years - R500
+                  </div>
+                </div>
+
                 <p className="text-xs text-slate-600 leading-relaxed mb-4">
-                  Lenasia school pickup, warm cooked lunch, quiet homework check, tutoring, and outdoor sports.
+                  Primary school readiness, phonics, early reading, writing, mathematical concepts, and creative arts.
                 </p>
               </div>
               <button

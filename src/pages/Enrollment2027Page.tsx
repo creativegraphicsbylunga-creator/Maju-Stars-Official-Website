@@ -24,7 +24,7 @@ interface Enrollment2027PageProps {
 
 export const Enrollment2027Page: React.FC<Enrollment2027PageProps> = ({ onNavigate, onOpenBookTour }) => {
   // Interactive Calculator State
-  const [selectedProgram, setSelectedProgram] = useState<'baby' | 'toddler' | 'preschool' | 'aftercare'>('preschool');
+  const [selectedProgram, setSelectedProgram] = useState<'nursery' | 'rrr' | 'rr' | 'grader'>('rr');
   const [childrenCount, setChildrenCount] = useState<number>(1);
   const [includeTransport, setIncludeTransport] = useState<boolean>(false);
   const [selectedTransportRoute, setSelectedTransportRoute] = useState<string>('ext-10');
@@ -41,10 +41,10 @@ export const Enrollment2027Page: React.FC<Enrollment2027PageProps> = ({ onNaviga
 
   // Calculate pricing
   const baseMonthlyFees: Record<string, number> = {
-    baby: 2100,
-    toddler: 1950,
-    preschool: 1950,
-    aftercare: 1100
+    nursery: 900,
+    rrr: 600,
+    rr: 550,
+    grader: 500
   };
 
   const baseRate = baseMonthlyFees[selectedProgram];
@@ -288,10 +288,10 @@ export const Enrollment2027Page: React.FC<Enrollment2027PageProps> = ({ onNaviga
                 </label>
                 <div className="grid grid-cols-2 gap-2 text-xs">
                   {[
-                    { id: 'baby', label: 'Baby Stars (3-24m)', price: 'R2,100' },
-                    { id: 'toddler', label: 'Toddlers (2-3y)', price: 'R1,950' },
-                    { id: 'preschool', label: 'Pre-School (3-5y)', price: 'R1,950' },
-                    { id: 'aftercare', label: 'After-Care (6-12y)', price: 'R1,100' }
+                    { id: 'nursery', label: 'Grade 0 / nursery (0-18m)', price: 'R900' },
+                    { id: 'rrr', label: 'Grade RRR (18m-3y)', price: 'R600' },
+                    { id: 'rr', label: 'Grade RR (3-4y)', price: 'R550' },
+                    { id: 'grader', label: 'Grade R (4-6y)', price: 'R500' }
                   ].map((p) => (
                     <button
                       key={p.id}
@@ -410,6 +410,10 @@ export const Enrollment2027Page: React.FC<Enrollment2027PageProps> = ({ onNaviga
                     <span>-R{((baseRate * 0.1) * (childrenCount - 1)).toFixed(0)}</span>
                   </div>
                 )}
+                <div className="flex justify-between text-purple-900 font-medium pt-1 border-t border-dashed border-slate-200">
+                  <span>Registration Fee (Once off):</span>
+                  <strong>R250</strong>
+                </div>
               </div>
 
               <button
