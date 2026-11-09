@@ -19,7 +19,9 @@ import {
   Star,
   Bus,
   ShieldCheck,
-  Download
+  Download,
+  Target,
+  AlertCircle
 } from 'lucide-react';
 import { SCHOOL_INFO, IMAGES, PROGRAMS, TESTIMONIALS, TRANSPORT_DATA } from '../data/preschoolData';
 import { PageId } from '../types';
@@ -625,13 +627,126 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBookTour }
               </div>
             </div>
 
-            {/* Pink Highlight Pill Overlay (Matching reference: "Where Curiosity Meets Confidence") */}
+            {/* Highlight Pill: Replacing with user requested "Creating Future Stars" */}
             <div className="mt-8 flex justify-center">
-              <div className="bg-[#FA5B88] text-white px-6 py-3 rounded-full shadow-lg shadow-pink-500/25 flex items-center gap-3 font-fredoka text-sm sm:text-base font-bold text-center">
-                <Sparkles className="w-5 h-5 text-yellow-300 shrink-0" />
-                <span>Where Curiosity Meets Confidence</span>
-                <Sparkles className="w-5 h-5 text-yellow-300 shrink-0" />
+              <div className="bg-[#FA5B88] text-white px-7 py-3 rounded-full shadow-lg shadow-pink-500/25 flex items-center gap-3 font-fredoka text-sm sm:text-base font-bold text-center tracking-wide hover:scale-105 transition-transform">
+                <Sparkles className="w-5 h-5 text-yellow-300 shrink-0 animate-pulse" />
+                <span>Creating Future Stars</span>
+                <Sparkles className="w-5 h-5 text-yellow-300 shrink-0 animate-pulse" />
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* MISSION & VISION SECTION - Our Vision , Our Promise */}
+      <section className="py-16 sm:py-24 bg-gradient-to-b from-white via-purple-50/40 to-white relative overflow-hidden border-y border-purple-100/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <div className="inline-flex items-center gap-2 text-xs font-extrabold text-[#5B34B2] uppercase tracking-widest mb-2 bg-purple-100/80 px-3.5 py-1.5 rounded-full border border-purple-200">
+              <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+              <span>Our Vision & Our Promise</span>
+              <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold font-fredoka text-slate-900 tracking-tight">
+              Mission & Vision
+            </h2>
+            <div className="mt-3 inline-flex items-center gap-2 px-4 py-1.5 bg-amber-50 border border-amber-200 rounded-full text-amber-800 text-xs sm:text-sm font-bold font-fredoka">
+              <span>OUR MOTTO :</span>
+              <span className="text-[#5B34B2]">Creating future stars 🌟</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch mb-10">
+            {/* Card 1: Our Vision & Our Promise */}
+            <div className="bg-gradient-to-br from-[#FAF5FF] to-white rounded-3xl p-8 sm:p-10 border-2 border-purple-200/80 shadow-md flex flex-col justify-between hover:shadow-xl transition-all">
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-[#5B34B2] text-white font-fredoka font-bold text-sm shadow-md shadow-purple-500/20">
+                    <Sparkles className="w-4 h-4 text-amber-300" />
+                    <span>Our Vision , Our Promise</span>
+                  </div>
+                  <span className="text-2xl">🌟</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold font-fredoka text-slate-900 mb-4">
+                  Envisioning a Brighter Future Beyond Boundaries
+                </h3>
+                <p className="text-slate-700 text-sm sm:text-base leading-relaxed mb-6 font-medium bg-white/80 p-5 rounded-2xl border border-purple-100">
+                  &ldquo;At Maju stars preschool we , envision a world where every child is recognised for their potential, given the foundation to shine beyond boundaries, we strive to create a safe , naturing environment where curiosity becomes confidence, learning inspires greatness ,and every little star is prepared for a brighter future.&rdquo;
+                </p>
+              </div>
+
+              <div className="pt-4 border-t border-purple-100 grid grid-cols-2 gap-3 text-xs font-bold text-[#5B34B2]">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                  <span>Curiosity becomes confidence</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                  <span>Learning inspires greatness</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 2: Our Mission */}
+            <div className="bg-gradient-to-br from-[#F0FDF4] to-white rounded-3xl p-8 sm:p-10 border-2 border-emerald-200/80 shadow-md flex flex-col justify-between hover:shadow-xl transition-all">
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-[#16A34A] text-white font-fredoka font-bold text-sm shadow-md shadow-emerald-500/20">
+                    <Target className="w-4 h-4 text-yellow-200" />
+                    <span>OUR MISSION</span>
+                  </div>
+                  <span className="text-2xl">🌱</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold font-fredoka text-slate-900 mb-4">
+                  Quality Early Childhood Education & Holistic Growth
+                </h3>
+                <p className="text-slate-700 text-sm sm:text-base leading-relaxed mb-6 font-medium bg-white/80 p-5 rounded-2xl border border-emerald-100">
+                  &ldquo;to provide quality early childhood education through play , creativity , care and meaningful learning experiences that develops each child intellectual, emotional,social and physical potential.&rdquo;
+                </p>
+              </div>
+
+              {/* 4 Pillars of potential */}
+              <div className="pt-4 border-t border-emerald-100 grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs">
+                <div className="bg-emerald-100/70 py-2 px-2 rounded-xl font-bold text-emerald-900">
+                  Intellectual
+                </div>
+                <div className="bg-purple-100/70 py-2 px-2 rounded-xl font-bold text-purple-900">
+                  Emotional
+                </div>
+                <div className="bg-amber-100/70 py-2 px-2 rounded-xl font-bold text-amber-900">
+                  Social
+                </div>
+                <div className="bg-rose-100/70 py-2 px-2 rounded-xl font-bold text-rose-900">
+                  Physical
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Important Enrollment & Space Guarantee Banner */}
+          <div className="p-4 sm:p-5 bg-amber-50 border-2 border-amber-300 rounded-3xl flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left shadow-sm">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-2xl bg-amber-500 text-white flex items-center justify-center shrink-0 shadow-sm">
+                <AlertCircle className="w-5 h-5" />
+              </div>
+              <div>
+                <div className="text-[11px] font-extrabold uppercase tracking-wider text-amber-900">
+                  Enrollment & Admissions Policy
+                </div>
+                <div className="text-sm sm:text-base font-bold font-fredoka text-slate-900">
+                  Payment is compulsory to guarantee space.
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center gap-2 shrink-0">
+              <button
+                onClick={() => onNavigate('enrollment-2027')}
+                className="px-5 py-2.5 rounded-full bg-[#5B34B2] hover:bg-[#482894] text-white text-xs font-bold font-fredoka transition-all shadow-md shadow-purple-500/25 flex items-center gap-1.5"
+              >
+                <span>Reserve 2027 Space</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
             </div>
           </div>
         </div>

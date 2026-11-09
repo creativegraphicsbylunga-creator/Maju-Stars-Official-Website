@@ -7,7 +7,11 @@ import outdoorPlayImg from '../assets/images/preschool_outdoor_kids_179161051394
 export const SCHOOL_INFO = {
   name: 'Maju Stars Pre-School, Daycare and After-care Centre',
   shortName: 'Maju Stars',
-  tagline: 'Learning today, leading tomorrow',
+  tagline: 'Creating Future Stars',
+  motto: 'Creating future stars 🌟',
+  vision: 'At Maju stars preschool we , envision a world where every child is recognised for their potential, given the foundation to shine beyond boundaries, we strive to create a safe , naturing environment where curiosity becomes confidence, learning inspires greatness ,and every little star is prepared for a brighter future.',
+  mission: 'to provide quality early childhood education through play , creativity , care and meaningful learning experiences that develops each child intellectual, emotional,social and physical potential.',
+  paymentNotice: 'Payment is compulsory to guarantee space.',
   heroHeadline: 'Inspiring Young Minds, Building Bright Futures!',
   heroSubtitle: 'A joyful place where curiosity grows, creativity shines and every child becomes their best self in the heart of Lenasia.',
   address: '15 Benue St, Lenasia, 1821',

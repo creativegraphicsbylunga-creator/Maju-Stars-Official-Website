@@ -174,6 +174,10 @@ export const Enrollment2027Page: React.FC<Enrollment2027PageProps> = ({ onNaviga
           <p className="text-slate-600 text-xs sm:text-sm mt-1">
             No hidden costs. Wholesome meals, snacks, learning materials, and supervision are all inclusive.
           </p>
+          <div className="mt-3 inline-flex items-center gap-2 px-4 py-1.5 bg-amber-50 border border-amber-300 rounded-full text-amber-900 text-xs font-bold font-fredoka shadow-2xs">
+            <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+            <span>Important Policy: Payment is compulsory to guarantee space.</span>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

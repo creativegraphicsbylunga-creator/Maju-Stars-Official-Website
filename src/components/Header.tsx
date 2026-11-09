@@ -62,7 +62,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Center: Slogan */}
           <div className="hidden md:flex items-center gap-2 text-amber-300 font-medium text-xs tracking-wide">
             <span>★</span>
-            <span className="text-white font-semibold">Learning today, leading tomorrow</span>
+            <span className="text-white font-semibold">Creating Future Stars</span>
             <span>★</span>
           </div>
 

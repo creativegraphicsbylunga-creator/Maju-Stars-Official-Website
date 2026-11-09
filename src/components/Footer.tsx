@@ -40,6 +40,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBookTour }) =>
               Inspiring young minds and building bright futures in Lenasia. A safe, loving, and stimulating home away from home where every child is celebrated.
             </p>
 
+            <div className="text-amber-300 text-xs font-bold font-fredoka flex items-center gap-1.5">
+              <span>OUR MOTTO:</span>
+              <span className="text-white">Creating future stars 🌟</span>
+            </div>
+
             <div className="pt-2 flex flex-wrap gap-2 text-[11px]">
               <span className="inline-flex items-center gap-1.5 bg-[#492795] text-amber-300 px-3 py-1 rounded-full border border-purple-400/30 font-medium">
                 <ShieldCheck className="w-3.5 h-3.5 text-amber-300" />
