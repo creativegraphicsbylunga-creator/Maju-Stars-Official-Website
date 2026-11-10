@@ -150,6 +150,22 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBookTour }) =>
                   <span>{SCHOOL_INFO.email}</span>
                 </div>
               </div>
+
+              {/* Quick Banking Details in Footer */}
+              <div className="mt-3 p-2.5 bg-[#2D1660] rounded-xl border border-purple-400/30 text-[11px] space-y-1">
+                <div className="text-amber-300 font-bold uppercase tracking-wider text-[10px]">
+                  Bank Details ({SCHOOL_INFO.banking.bankName}):
+                </div>
+                <div className="text-white">
+                  <strong>Bank:</strong> {SCHOOL_INFO.banking.bankName}
+                </div>
+                <div className="text-white">
+                  <strong>Acc:</strong> {SCHOOL_INFO.banking.accountNumber} ({SCHOOL_INFO.banking.accountType})
+                </div>
+                <div className="text-purple-200">
+                  <strong>Branch:</strong> {SCHOOL_INFO.banking.branchCode}
+                </div>
+              </div>
             </div>
           </div>
 

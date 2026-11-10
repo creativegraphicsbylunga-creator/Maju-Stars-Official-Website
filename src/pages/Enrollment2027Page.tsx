@@ -12,9 +12,14 @@ import {
   Award,
   DollarSign,
   Info,
-  Bus
+  Bus,
+  CreditCard,
+  Building2,
+  Copy,
+  Check,
+  AlertCircle
 } from 'lucide-react';
-import { SCHOOL_INFO, FEE_TIERS_2027, FAQS, TRANSPORT_DATA } from '../data/preschoolData';
+import { SCHOOL_INFO, BANKING_DETAILS, FEE_TIERS_2027, FAQS, TRANSPORT_DATA } from '../data/preschoolData';
 import { PageId } from '../types';
 
 interface Enrollment2027PageProps {
@@ -23,6 +28,14 @@ interface Enrollment2027PageProps {
 }
 
 export const Enrollment2027Page: React.FC<Enrollment2027PageProps> = ({ onNavigate, onOpenBookTour }) => {
+  const [copiedAccount, setCopiedAccount] = useState(false);
+
+  const handleCopyAccount = (text: string) => {
+    navigator.clipboard.writeText(text);
+    setCopiedAccount(true);
+    setTimeout(() => setCopiedAccount(false), 2500);
+  };
+
   // Interactive Calculator State
   const [selectedProgram, setSelectedProgram] = useState<'nursery' | 'rrr' | 'rr' | 'grader'>('rr');
   const [childrenCount, setChildrenCount] = useState<number>(1);
@@ -262,6 +275,101 @@ export const Enrollment2027Page: React.FC<Enrollment2027PageProps> = ({ onNaviga
                 </span>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* OFFICIAL BANKING DETAILS CARD */}
+        <div className="mt-8 bg-gradient-to-br from-[#2D1660] via-[#381E76] to-[#5B34B2] text-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-xl border-4 border-amber-300/40 relative overflow-hidden">
+          <div className="relative z-10">
+            <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-purple-300/20">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center shadow-lg shadow-amber-400/20 shrink-0">
+                  <Building2 className="w-6 h-6 text-slate-950" />
+                </div>
+                <div>
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/15 text-amber-300 text-[10px] font-extrabold uppercase tracking-wider mb-1">
+                    <CreditCard className="w-3 h-3" />
+                    <span>Tuition & Registration Fee Account</span>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold font-fredoka text-white">
+                    Official Banking Details
+                  </h3>
+                </div>
+              </div>
+
+              <div className="bg-amber-400/20 border border-amber-400/40 px-3.5 py-1.5 rounded-full text-amber-200 text-xs font-semibold flex items-center gap-1.5">
+                <AlertCircle className="w-3.5 h-3.5 text-amber-300 shrink-0" />
+                <span>Payment is compulsory to guarantee space</span>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 mb-4">
+              <div className="bg-white/10 backdrop-blur-xs p-4 rounded-2xl border border-white/15">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-purple-200 block mb-1">
+                  Bank Name
+                </span>
+                <div className="text-xl sm:text-2xl font-bold font-fredoka text-amber-300">
+                  {BANKING_DETAILS.bankName}
+                </div>
+                <span className="text-[10px] text-purple-300 block mt-1">First National Bank</span>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-xs p-4 rounded-2xl border border-white/15 hover:bg-white/15 transition-all">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-purple-200 block mb-1">
+                  Account Number
+                </span>
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-lg sm:text-xl font-bold font-mono tracking-wider text-white select-all">
+                    {BANKING_DETAILS.accountNumber}
+                  </span>
+                  <button
+                    onClick={() => handleCopyAccount(BANKING_DETAILS.accountNumber)}
+                    className="p-1.5 bg-white/20 hover:bg-white/30 rounded-lg text-white transition-colors cursor-pointer shrink-0"
+                    title="Copy Account Number"
+                  >
+                    {copiedAccount ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
+                  </button>
+                </div>
+                <span className="text-[10px] text-purple-300 block mt-1">
+                  {copiedAccount ? '✓ Copied to clipboard!' : 'Click to copy number'}
+                </span>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-xs p-4 rounded-2xl border border-white/15">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-purple-200 block mb-1">
+                  Account Name
+                </span>
+                <div className="text-xs sm:text-sm font-bold font-fredoka text-white leading-snug">
+                  {BANKING_DETAILS.accountName}
+                </div>
+                <span className="text-[10px] text-purple-300 block mt-1">Beneficiary name</span>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-xs p-4 rounded-2xl border border-white/15">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-purple-200 block mb-1">
+                  Account Type
+                </span>
+                <div className="text-sm sm:text-base font-bold font-fredoka text-white">
+                  {BANKING_DETAILS.accountType}
+                </div>
+                <span className="text-[10px] text-purple-300 block mt-1">Cheque / Current</span>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-xs p-4 rounded-2xl border border-white/15">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-purple-200 block mb-1">
+                  Branch Code
+                </span>
+                <div className="text-xl sm:text-2xl font-bold font-mono text-white tracking-wider">
+                  {BANKING_DETAILS.branchCode}
+                </div>
+                <span className="text-[10px] text-purple-300 block mt-1">Universal branch code</span>
+              </div>
+            </div>
+
+            <div className="bg-purple-900/60 border border-purple-400/30 p-3 rounded-xl text-xs text-purple-100 flex flex-col sm:flex-row items-center justify-between gap-2">
+              <span><strong>Reference:</strong> Child's Full Name & Surname (or registration code)</span>
+              <span className="text-slate-300 text-[11px]">Send POP via WhatsApp to: <strong className="text-white">078 722 7449</strong></span>
+            </div>
           </div>
         </div>
       </section>

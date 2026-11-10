@@ -16,11 +16,13 @@ import {
   ArrowLeft,
   Sparkles,
   Clock,
-  ShieldCheck,
   Check,
-  Bus
+  Bus,
+  CreditCard,
+  Building2,
+  AlertCircle
 } from 'lucide-react';
-import { SCHOOL_INFO, PROGRAMS, TRANSPORT_DATA } from '../data/preschoolData';
+import { SCHOOL_INFO, BANKING_DETAILS, PROGRAMS, TRANSPORT_DATA } from '../data/preschoolData';
 import { RegistrationFormData, PageId } from '../types';
 
 interface RegistrationPageProps {
@@ -765,6 +767,48 @@ export const RegistrationPage: React.FC<RegistrationPageProps> = ({ onNavigate, 
                 <span>Status: Provisional Acceptance Confirmed</span>
                 <span className="text-emerald-700 font-bold">✓ Slot Reserved</span>
               </div>
+            </div>
+
+            {/* Official Banking Details for Fee Payment */}
+            <div className="mb-6 p-5 rounded-2xl bg-gradient-to-br from-[#2D1660] to-[#5B34B2] text-white text-left shadow-md border-2 border-amber-300/40">
+              <div className="flex items-center justify-between gap-2 mb-3 pb-2 border-b border-purple-300/30">
+                <div className="flex items-center gap-2">
+                  <Building2 className="w-5 h-5 text-amber-300" />
+                  <span className="text-xs sm:text-sm font-bold font-fredoka text-white">
+                    Official Banking Details for Registration & Tuition
+                  </span>
+                </div>
+                <span className="text-[10px] text-amber-200 bg-amber-400/20 px-2.5 py-0.5 rounded-full border border-amber-300/30 font-bold">
+                  Payment Compulsory
+                </span>
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5 text-xs mb-3">
+                <div className="bg-white/10 p-2.5 rounded-xl border border-white/10">
+                  <span className="text-[10px] uppercase font-bold text-purple-200 block">Bank Name</span>
+                  <strong className="text-amber-300 font-fredoka text-sm block">{BANKING_DETAILS.bankName}</strong>
+                </div>
+                <div className="bg-white/10 p-2.5 rounded-xl border border-white/10">
+                  <span className="text-[10px] uppercase font-bold text-purple-200 block">Account Number</span>
+                  <strong className="text-white font-mono text-xs tracking-wider select-all">{BANKING_DETAILS.accountNumber}</strong>
+                </div>
+                <div className="bg-white/10 p-2.5 rounded-xl border border-white/10">
+                  <span className="text-[10px] uppercase font-bold text-purple-200 block">Account Name</span>
+                  <strong className="text-white text-[11px] block leading-tight">{BANKING_DETAILS.accountName}</strong>
+                </div>
+                <div className="bg-white/10 p-2.5 rounded-xl border border-white/10">
+                  <span className="text-[10px] uppercase font-bold text-purple-200 block">Account Type</span>
+                  <strong className="text-white text-xs block">{BANKING_DETAILS.accountType}</strong>
+                </div>
+                <div className="bg-white/10 p-2.5 rounded-xl border border-white/10">
+                  <span className="text-[10px] uppercase font-bold text-purple-200 block">Branch Code</span>
+                  <strong className="text-white font-mono text-xs">{BANKING_DETAILS.branchCode}</strong>
+                </div>
+              </div>
+
+              <p className="text-[11px] text-purple-100 italic">
+                * Please use Reference: <strong className="text-white font-mono">{referenceCode}</strong> or child's name, and WhatsApp POP to <strong>078 722 7449</strong>.
+              </p>
             </div>
 
             {/* Action Buttons */}

@@ -30,12 +30,30 @@ export const SCHOOL_INFO = {
     { days: 'Public Holidays', hours: 'Closed', note: 'As per South African calendar' }
   ],
   registrationNumber: 'ECD/JHB/2019/58129',
+  banking: {
+    bankName: 'FNB',
+    accountName: 'Maju Stars Pre-school, Daycare & Aftercare',
+    accountNumber: '62829529926',
+    accountType: 'Business Account',
+    branchCode: '250655',
+    referenceNotice: 'Use Child Name & Surname as payment reference'
+  },
   socials: {
     facebook: 'https://facebook.com',
     instagram: 'https://instagram.com',
     youtube: 'https://youtube.com',
     whatsapp: 'https://wa.me/27787227449'
   }
+};
+
+export const BANKING_DETAILS = {
+  bankName: 'FNB',
+  accountName: 'Maju Stars Pre-school, Daycare & Aftercare',
+  accountNumber: '62829529926',
+  accountType: 'Business Account',
+  branchCode: '250655',
+  referenceNotice: 'Please use Child Full Name as payment reference',
+  compulsoryNotice: 'Payment is compulsory to guarantee space.'
 };
 
 export const IMAGES = {
